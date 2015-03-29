@@ -1,0 +1,5 @@
+Project_Evolve: Created and founded by Padraig Doyle 
+
+Project_Evolve allows you to simply generate new ideas every day to accomplish with the hopes of improving yourself and the world. It is seperated into three different categories which are: random acts of kindness, do something you're afraid of, and do something for yourself. Hitting the generate button will randomly generate three possible ideas per category per day. 
+
+It was created in March of 2015 at General Assembly. 

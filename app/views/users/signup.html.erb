@@ -1,0 +1,9 @@
+<h1>Signup</h1>
+
+  <%= simple_form_for(@user, url: signup_path) do |f|%>
+  <%= f.input(:username, autofocus: true, placeholder: 'Username', label: false, :input_html => {:class => 'inputSign'}) %>
+  <%= f.input(:password, placeholder: 'Password', label: false, :input_html => {class: 'inputSign'}) %>
+  <%= f.input(:name, placeholder: 'Name', label: false, :input_html => {class: 'inputSign'}) %>
+  <%= f.input(:email, placeholder: 'Email', label: false, :input_html => {class: 'inputSign'}) %>
+  <%= f.button(:submit, "Sign Up", class: "my-button") %>
+<% end %>
