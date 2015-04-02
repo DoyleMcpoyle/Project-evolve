@@ -1,2 +1,77 @@
-<h1>Acts#index</h1>
-<p>Find me in app/views/acts/index.html.erb</p>
+   <div class="w-section">
+     <div>
+       <div class="w-slider slider-change" data-animation="slide" data-duration="450" data-infinite="1" data-delay="5000" data-autoplay="1">
+         <div class="w-slider-mask">
+           <h1 class="sliderh1">Spread The Goodness</h1>
+           <div class="w-slide slide1"></div>
+           <div class="w-slide slide1 slide2"></div>
+           <div class="w-slide slide1 slide3"></div>
+           <div class="w-slide slide1 slide4"></div>
+           <div class="w-slide slide1 slide5"></div>
+         </div>
+         <div class="w-slider-arrow-left"></div>
+         <div class="w-slider-arrow-right"></div>
+       </div>
+     </div>
+   </div>
+   <div class="w-section content">
+     <div class="w-row">
+       <div class="w-col w-col-4">
+         <div class="icondiv"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+         </div>
+         <div class="headlinediv">
+           <h2>Random Act of Kindness</h2>
+         </div>
+         <div class="buttondiv"><%= link_to "Generate", acts_by_category_path("kindness"), class: "button generatebtn" %>
+         </div>
+         <div class="results">
+          <ul>
+          <% @acts_by_category["kindness"].each do |act| %>
+            <li><%= act %></li>
+          <% end %>
+          </ul>
+         </div>
+         <div class="button2div"><%= link_to "Share Ideas", comment_category_path(:kindness), class: "button commentbtn" %>
+         </div>
+         <div class="button3div"><%= link_to "My List", "", class: "button mylistbtn" %>
+         </div>
+       </div>
+       <div class="w-col w-col-4">
+         <div class="icondiv"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+         </div>
+         <div class="headlinediv">
+           <h2>Do Something You’re Afraid Of</h2>
+           <div class="buttondiv"><%= link_to "Generate", acts_by_category_path("fear"), class: "button generatebtn" %>
+           </div>
+         </div>
+         <div class="results"></div>
+         <ul>
+         <% @acts_by_category["fear"].each do |act| %>
+           <li><%= act %></li>
+         <% end %>
+         </ul>
+         <div class="button2div"><%= link_to "Share Ideas", comment_category_path(:fear), class: "button commentbtn" %>
+         </div>
+         <div class="button3div"><a class="button mylistbtn" href="#">My List</a>
+         </div>
+       </div>
+       <div class="w-col w-col-4">
+         <div class="icondiv"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="image-placeholder.svg">
+           <h2>Do Something For Yourself</h2>
+         </div>
+         <div class="buttondiv"><%= link_to "Generate", acts_by_category_path("yourself"), class: "button generatebtn" %>
+         </div>
+         <div class="results"></div>
+         <ul>
+         <% @acts_by_category["yourself"].each do |act| %>
+           <li><%= act %></li>
+         <% end %>
+         </ul>
+         <div class="button2div"><%= link_to "Share Ideas", comment_category_path(:yourself), class: "button commentbtn" %>
+         </div>
+         <div class="button3div"><a class="button mylistbtn" href="#">My List</a>
+         </div>
+       </div>
+     </div>
+   </div>
+ 

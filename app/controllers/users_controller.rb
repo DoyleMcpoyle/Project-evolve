@@ -23,7 +23,7 @@ class UsersController < ApplicationController
         render :login
       else
         session[:user_id] = authorized_user.id
-        redirect_to map_path
+        redirect_to acts_path
       end
     end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     def home
       user_id = session[:user_id]
       @found_user = User.find(user_id)
-      redirect_to map_path
+      redirect_to acts_path
     end
 
     def logout
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       @user = User.new user_params
       if @user.save
         session[:user_id] = @user.id
-        redirect_to map_path
+        redirect_to acts_path
       else
         flash.now[:notice] = "Username and Password can't be blank."
         render :signup
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   private 
     def prevent_login_signup
       if session[:user_id]
-        redirect_to map_path
+        redirect_to acts_path
       end
     end
     

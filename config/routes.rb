@@ -7,24 +7,43 @@ Rails.application.routes.draw do
   get 'signup', to: "users#signup", as: 'signup'
 
   post 'login', to: "users#attempt_login"
-  
+
   post 'signup', to: "users#create"
 
   get 'home', to: "users#home", as: 'home'
 
   delete 'logout', to: "users#logout", as: "logout"
 
-  get 'acts/index'
+  get 'acts', to: "acts#index", as: "acts"
 
-  get 'comments/kindness'
+  get 'acts/:category', to:'acts#index', as: "acts_by_category"
+
+  get 'acts/show'
+
+  get '/comments/:category', to: 'comments#category', as: "comment_category"
+  
+  resources :comments, only: [:create, :destroy]
  
-  get 'comments/fear'
-
-  get 'comments/yourself'
-
   get 'users/login'
 
   get 'users/signup'
+
+
+# rake routes:       Prefix Verb   URI Pattern                  Controller#Action
+#                root GET    /                            users#login
+#               login GET    /login(.:format)             users#login
+#              signup GET    /signup(.:format)            users#signup
+#                     POST   /login(.:format)             users#attempt_login
+#                     POST   /signup(.:format)            users#create
+#                home GET    /home(.:format)              users#home
+#              logout DELETE /logout(.:format)            users#logout
+#          acts_index GET    /acts/index(.:format)        acts#index
+#   comments_kindness GET    /comments/kindness(.:format) comments#kindness
+#       comments_fear GET    /comments/fear(.:format)     comments#fear
+#   comments_yourself GET    /comments/yourself(.:format) comments#yourself
+#         users_login GET    /users/login(.:format)       users#login
+#        users_signup GET    /users/signup(.:format)      users#signup
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,38 @@
+  <% if params[:category] == "kindness" %>
+  <h2>Random Acts of Kindness</h2>
+  <% elsif params[:category] == "fear" %>
+  <h2>Do Something You're Afraid Of</h2>
+  <% else %>   
+  <h2>Do Something For Yourself</h2>
+  <% end %> 
+
+ 
+
+  <h1 class="commentpage1">Comments</h1>
+  <div class="w-section content">
+    <div class="w-container">
+    <% if current_user %>
+    <%= form_for @comment do |form| %>
+      <div class="formList">
+        <p>
+          <%= form.hidden_field :category_id, value: params[:category] %>
+
+          <%= form.text_area :comment, :rows => 5 %>
+        <p>
+        <%= submit_tag "Post" %>
+      </div>
+    <% end %>
+    <% end %>
+      
+      <ul id="comments">
+        <% @comments.each do |comment| %>
+          <li><%= comment.comment %>
+          <% if current_user && comment.user == current_user %>
+            <%= button_to "Delete Comment", comment_path(comment), :method => :delete %>
+          <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+ 
