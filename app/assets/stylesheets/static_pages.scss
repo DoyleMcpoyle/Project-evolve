@@ -1,0 +1,34 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* line 5, /home/pat/WDI/Homework/project_kindness/app/assets/stylesheets/static_pages.scss */
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 10, /home/pat/WDI/Homework/project_kindness/app/assets/stylesheets/static_pages.scss */
+p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  text-align: center;
+  padding: 10px;
+}
+
+.quote {
+  padding: 40px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+}
+
+.quote span {
+  font-weight: bold;
+}
+
+.wrapper h1 {
+font-size: 35px;
+}

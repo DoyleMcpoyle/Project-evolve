@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'static_pages/about'
+
+  get 'static_pages/contact'
+
   root 'users#login'
 
   get 'login', to: "users#login", as: 'login'

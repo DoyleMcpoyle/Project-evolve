@@ -1,6 +1,8 @@
 <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
   <div class="w-container"><a class="w-nav-brand" href="#"><h1 class="logo">Project Evolve</h1></a>
-    <nav class="w-nav-menu" role="navigation"><a class="w-nav-link navlink" href="/">Home</a><a class="w-nav-link navlink" href="#">About</a><a class="w-nav-link navlink" href="#">Contact</a>
+    <nav class="w-nav-menu" role="navigation"><%= link_to "Home", root_path, :class => "w-nav-link navlink" %>
+    <%= link_to "About", static_pages_about_path, :class => "w-nav-link navlink" %>
+    <%= link_to "Contact", static_pages_contact_path, :class => "w-nav-link navlink" %>
     </nav>
     <div class="w-nav-button">
       <div class="w-icon-nav-menu navicon"></div>

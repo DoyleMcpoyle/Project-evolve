@@ -1,3 +1,58 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.w-container {
+  width: 700px;
+}
+
+.postbtn {
+  margin-left: 40px;
+  border: 1px solid #D11D50;
+  padding: 10px 40px;
+  background-color: #D11D50;
+  color: white;
+  border-radius: 7px;
+}
+
+.postbtn:hover {
+  background-color: black;
+  border-color: black;
+}
+
+#comments {
+  background-color: white;
+  border: 1px solid gray;
+  width: 640px !important;
+  margin: 30px;
+  padding: 40px;
+  display: block;
+}
+
+#comments li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  margin: 10px;
+  position: relative;
+}
+
+#comments li:hover input {
+display: block;
+}
+
+#comments li input {
+  float: right;
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+
+.commentpage1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 35px;
+}
